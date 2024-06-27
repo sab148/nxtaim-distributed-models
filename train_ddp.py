@@ -237,7 +237,7 @@ def main():
 
         if valid_loss < min_valid_loss:
             min_valid_loss = valid_loss
-            save0(model, 'model-best.pt')
+            save0(model, 'model-best-ddp.pt')
 
             
     end_time = time.perf_counter()
@@ -245,7 +245,7 @@ def main():
     test_loss = test_model(model, loss_func, test_dset, device)
 
     print0('Final test loss:', test_loss)
-    save0(model, 'model-final')
+    save0(model, 'model-final-ddp')
 
 
 if __name__ == '__main__':

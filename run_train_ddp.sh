@@ -29,7 +29,7 @@ echo "----------------------------------"
 
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 echo "Job id: $SLURM_JOB_ID"
-source sc_venv_template/activate.sh 
+source env/activate.sh 
 
 
 srun --cpu_bind=none bash -c "torchrun \

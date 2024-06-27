@@ -43,7 +43,7 @@ def parse_args():
     parser.add_argument(
         '--epochs',
         type=int,
-        default=2,
+        default=120,
         help='How many epochs to train for.',
     )
     parser.add_argument(
@@ -86,7 +86,7 @@ def print0(*args, **kwargs):
         print(*args, **kwargs)
 
 
-def save_model(checkpoint_type, model, rank, save_dir='model-final.pt', optim_dir="optimizer-final.pt", optimizer=None):
+def save_model(checkpoint_type, model, rank, save_dir='model-final-fsdp.pt', optim_dir="optimizer-final-fsdp.pt", optimizer=None):
     if checkpoint_type == 'full':
         model_checkpointing.save_model_checkpoint(model, save_dir, rank)
         if optimizer is not None:
@@ -262,7 +262,7 @@ def main():
         
         if valid_loss < min_valid_loss:
             min_valid_loss = valid_loss
-            save_model(args.save_model_opt, model, rank, "model-best.pt", "optimizer-best.pt", optimizer=opt)
+            save_model(args.save_model_opt, model, rank, "model-best-fsdp.pt", "optimizer-best-fsdp.pt", optimizer=opt)
 
             
     end_time = time.perf_counter()
