@@ -144,20 +144,6 @@ def prepare_datasets(args, device):
     return train_dset, valid_dset, test_dset
 
 
-def train_batch(opt, model, loss_func, features, labels):
-    """Train the model on a batch and return the global loss."""
-    model.train()
-    opt.zero_grad(set_to_none=True)
-
-    preds = model(features)
-    loss = loss_func(preds, labels)
-    loss.backward()
-    opt.step()
-    # Obtain the global average loss.
-    loss_avg = all_reduce_avg(loss)
-    return loss_avg.item()
-
-
 def test_model(model, loss_func, test_dset, device):
     """Evaluate the model on an evaluation set and return the global
     loss over the entire evaluation set.
@@ -190,6 +176,9 @@ def main():
     # 5. Set the default CUDA device for the current process, ensuring all subsequent CUDA operations are performed on the specified GPU device.
     # 6. Set the random number generator initialization value for each process.
 
+    # Remove this line after implementing the above steps.
+    device = torch.device('cuda')
+    
     train_dset, valid_dset, test_dset = prepare_datasets(args, device)
 
     model = torchvision.models.resnet50(weights=None)
@@ -209,7 +198,8 @@ def main():
 
     for epoch in range(args.epochs):
         model.train()
-        train_dset.sampler.set_epoch(epoch)
+        ## TODO:
+        # Sets the current epoch for the dataset sampler to ensure proper data shuffling in each epoch
 
         for (i, (features, labels)) in enumerate(train_dset):
             features = features.to(device)
@@ -259,7 +249,7 @@ def main():
     
     ## TODO:
     # Replace the following line with the utility function to save the model.
-    torch.save(args.save_model_opt, model, rank, save_optimizer=args.save_optimizer)
+    torch.save(model, "model-final.pt")
 
 
 if __name__ == '__main__':
