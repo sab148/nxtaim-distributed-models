@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=training2426
-#SBATCH --nodes=1
+#SBATCH --nodes=4
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=96
 #SBATCH --time=00:30:00
