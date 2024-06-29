@@ -4,8 +4,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=96
 #SBATCH --time=00:30:00
-#SBATCH --gres=gpu:4
-#SBATCH --partition=booster
+#SBATCH --gres=gpu:1
+#SBATCH --partition=gpus
 
 # 1， 2， 4，  8，  16， 32，  64，  128， 256
 # 4， 8， 16， 32， 64， 128， 256， 512， 1024
@@ -27,7 +27,6 @@ echo "MASTER_ADDR:MASTER_PORT=""$MASTER_ADDR":"$MASTER_PORT"
 echo "----------------------------------"
 
 
-export CUDA_VISIBLE_DEVICES=0,1,2,3
 echo "Job id: $SLURM_JOB_ID"
 source env/activate.sh 
 
@@ -35,7 +34,7 @@ source env/activate.sh
 srun --cpu_bind=none bash -c "torchrun \
     --nnodes=$SLURM_NNODES \
     --rdzv_backend c10d \
-    --nproc_per_node=4 \
+    --nproc_per_node=gpu \
     --rdzv_id $RANDOM \
     --rdzv_endpoint=$MASTER_ADDR:$MASTER_PORT \
     --rdzv_conf=is_host=\$(if ((SLURM_NODEID)); then echo 0; else echo 1; fi) \

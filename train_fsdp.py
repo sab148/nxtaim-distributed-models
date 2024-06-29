@@ -67,7 +67,7 @@ def parse_args():
     parser.add_argument(
         '--save-model-opt',
         choices=['full', 'sharded', 'local'],
-        default='local',
+        default='sharded',
         help='How to save the model state.',
     )
 
@@ -256,7 +256,6 @@ def main():
             if i % 10 == 0:
                 print0(f'[{epoch}/{args.epochs}; {i}] loss: {loss:.5f}')
 
- 
         valid_loss = test_model(model, loss_func, valid_dset, device)
         print0(f'[{epoch}/{args.epochs}; {i}] valid loss: {valid_loss:.5f}')
         
