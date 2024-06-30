@@ -18,7 +18,7 @@ MASTER_ADDR="${MASTER_ADDR}i"
 # Get IP for hostname.
 export MASTER_ADDR="$(nslookup "$MASTER_ADDR" | grep -oP '(?<=Address: ).*')"
 export MASTER_PORT=7010
-export GPUS_PER_NODE=4
+export GPUS_PER_NODE=1
 
 echo "MASTER_ADDR:MASTER_PORT=""$MASTER_ADDR":"$MASTER_PORT"
 echo "----------------------------------"
