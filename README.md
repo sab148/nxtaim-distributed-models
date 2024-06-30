@@ -43,6 +43,7 @@ git clone https://github.com/sab148/nxtaim-distributed-models
 
 For Python:
 ```sh
+cd nxtaim-distributed-models/DDP-FSDP-at-FZJ/
 bash env/setup.sh
 ```
 
@@ -75,9 +76,9 @@ bash env/setup.sh
 
 ## Workshop Materials
 
-The PowerPoint presentation for the workshop is available in this repository. We will use it to guide the workshop sessions. You can find the presentation [here] ().
+The PowerPoint presentation for the first part of the session is available in this repository. We will use it to guide the session. You can find the presentation [here](https://github.com/sab148/nxtaim-distributed-models/blob/main/DDP-FSDP-at-FZJ/nxtaim_workshop_presentation.pdf).
 
-During the workshop, we will primarily use to_distributed_training.py and run_to_distributed_training.sh files. 
+During the first part of the session, we will primarily use to_distributed_training.py and run_to_distributed_training.sh files. 
 
 ## Resources
 - [FSDP Paper](https://arxiv.org/pdf/2304.11277)
