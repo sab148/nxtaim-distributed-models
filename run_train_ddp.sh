@@ -7,9 +7,6 @@
 #SBATCH --gres=gpu:1
 #SBATCH --partition=gpus
 
-# 1， 2， 4，  8，  16， 32，  64，  128， 256
-# 4， 8， 16， 32， 64， 128， 256， 512， 1024
-
 # Without this, srun does not inherit cpus-per-task from sbatch.
 echo "----------------------------------"
 export SRUN_CPUS_PER_TASK="$SLURM_CPUS_PER_TASK"
