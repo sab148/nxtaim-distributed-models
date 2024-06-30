@@ -25,7 +25,7 @@ In this workshop, you will learn:
 
 Before attending the workshop, ensure you have:
 - Access to the training project via JuDoor [training2426](https://judoor.fz-juelich.de/projects/join/training2426)
-- Configured your SSH key to have access to the JUSUF machine. Otherwise, You can also use [Jupyter-JSC] (https://jupyter.jsc.fz-juelich.de/)
+- Configured your SSH key to have access to the JUSUF machine. Otherwise, You can also use [Jupyter-JSC](https://jupyter.jsc.fz-juelich.de/)
 
 ## Installation
 
