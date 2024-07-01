@@ -141,10 +141,10 @@ def main():
     print('Starting training...')  
     start_time = time.perf_counter()
     
-    model.train()
     
     for epoch in range(args.epochs):
-        
+        model.train()
+
         for (i, (features, labels)) in enumerate(train_dset):
             features = features.to(device)
             labels = labels.to(device)
