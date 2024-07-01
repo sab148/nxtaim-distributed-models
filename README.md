@@ -78,7 +78,7 @@ bash env/setup.sh
 
 ## Advanced HPC Cluster Usage Session Materials
 
-The PowerPoint presentation for the first part of the session is available in this repository. We will use it to guide the session. You can find the presentation [here](https://github.com/sab148/nxtaim-distributed-models/blob/main/DDP-FSDP-at-FZJ/nxtaim_workshop_presentation.pdf).
+The PowerPoint presentation for the first part of the session is available in this repository. We will use it to guide the session. You can find the presentation [here](https://github.com/sab148/nxtaim-distributed-models/blob/main/DDP-FSDP-at-FZJ/nxtaim_workshop_presentation.pdf) and [here](https://fz-juelich.sciebo.de/s/hc6tSV8pDCNVOaC).
 
 During the first part of the session, we will primarily use to_distributed_training.py and run_to_distributed_training.sh files. 
 
