@@ -1,6 +1,6 @@
 # Advanced HPC Cluster Usage Session
 
-Welcome to the Advanced HPC Cluster Usage Session! This workshop aims to demonstrate how to parallelize code effectively on one of Europe's fastest computers at FZJ.
+Welcome to the Advanced HPC Cluster Usage Session. This Session aims to demonstrate how to parallelize code effectively on one of Europe's fastest computers at FZJ.
 
 ## Table of Contents
 
