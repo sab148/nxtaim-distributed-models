@@ -72,7 +72,9 @@ bash env/setup.sh
 
 8. **FSDP Limitations**
 
-9. **Conclusion**
+9. **Advanced Hyperparameter Optimization with Ray Tune** 
+
+10. **Conclusion**
 
 ## Advanced HPC Cluster Usage Session Materials
 
