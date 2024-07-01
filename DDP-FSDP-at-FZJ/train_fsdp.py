@@ -197,8 +197,7 @@ def main():
 
     # Get the identifier of each process within a node
     local_rank = int(os.getenv('LOCAL_RANK'))
-    # Get the global identifier of each process within the distributed system
-    rank = int(os.environ['RANK'])
+
     # Creates a torch.device object that represents the GPU to be used by this process.
     device = torch.device('cuda', local_rank)
     # Sets the default CUDA device for the current process, 

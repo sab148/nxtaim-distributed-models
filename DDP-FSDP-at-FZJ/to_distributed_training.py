@@ -171,10 +171,9 @@ def main():
     ## TODO: 
     # 1. Add code to initialize the distributed training environment.
     # 2. Get the identifier of each process within a node
-    # 3. Get the global identifier of each process within the distributed system.
-    # 4. Create a torch.device object that represents the GPU to be used by this process.
-    # 5. Set the default CUDA device for the current process, ensuring all subsequent CUDA operations are performed on the specified GPU device.
-    # 6. Set the random number generator initialization value for each process.
+    # 3. Create a torch.device object that represents the GPU to be used by this process.
+    # 4. Set the default CUDA device for the current process, ensuring all subsequent CUDA operations are performed on the specified GPU device.
+    # 5. Set the random number generator initialization value for each process.
 
     # Remove this line after implementing the above steps.
     device = torch.device('cuda')

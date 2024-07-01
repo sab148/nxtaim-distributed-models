@@ -7,8 +7,8 @@ Welcome to the Advanced HPC Cluster Usage Session. This Session aims to demonstr
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Workshop Agenda](#workshop-agenda)
-- [Workshop Materials](#Workshop-materials)
+- [Agenda](#workshop-agenda)
+- [Materials](#Workshop-materials)
 - [Resources](#resources)
 
 ## Overview
@@ -74,7 +74,7 @@ bash env/setup.sh
 
 9. **Conclusion**
 
-## Workshop Materials
+## Advanced HPC Cluster Usage Session Materials
 
 The PowerPoint presentation for the first part of the session is available in this repository. We will use it to guide the session. You can find the presentation [here](https://github.com/sab148/nxtaim-distributed-models/blob/main/DDP-FSDP-at-FZJ/nxtaim_workshop_presentation.pdf).
 
