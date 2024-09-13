@@ -1,11 +1,13 @@
 #!/bin/bash
-#SBATCH --account=training2426
+#SBATCH --account=training2435
 #SBATCH --nodes=1   ## TODO: Increase this number when you use DDP or FSDP
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=96
 #SBATCH --time=00:30:00
 #SBATCH --gres=gpu:1
-#SBATCH --partition=gpus
+#SBATCH --partition=dc-gpu
+
+#SBATCH --reservation=training2435
 
 # Without this, srun does not inherit cpus-per-task from sbatch.
 echo "----------------------------------"
@@ -22,4 +24,4 @@ source env/activate.sh
 
 ## TODO:
 # Replace this line with the distributed training launch script
-srun --cpu_bind=none python ./to_distributed_training.py
+srun --cpu_bind=none python to_distributed_training.py
