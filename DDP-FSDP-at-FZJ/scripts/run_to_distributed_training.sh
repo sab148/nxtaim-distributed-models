@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=96
 #SBATCH --time=00:30:00
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:1   ## TODO: Change this number to 4 when you use DDP or FSDP
 #SBATCH --partition=dc-gpu
 
 #SBATCH --reservation=training2435
