@@ -33,8 +33,8 @@ To get started with the examples provided in this repository, clone the repo and
 ### Clone the Repository
 
 ```sh
-mkdir /p/project/training2435/$USER
-cd /p/project/training2435/$USER
+mkdir /p/project1/training2435/$USER
+cd /p/project1/training2435/$USER
 git clone https://github.com/sab148/nxtaim-distributed-models
 ```
 
