@@ -57,13 +57,13 @@ bash env/setup.sh
 3. **Algorithm Overview**
 
 4. **Model Initializations**
-   - Deferred Initialization.
+   - Deferred Initialization
 
 5. **Hands-on Coding** 
 
 6. **Sharding Strategies**
-   - Full Sharding.
-   - Hybrid Sharding.
+   - Full Sharding
+   - Hybrid Sharding
    - hands-on coding
 
 7. **FSDP Interoperability**
